@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from 'next/image'
+import NavBar from "./components/navBar";
 
 type Repository = {
   id: number;
@@ -20,7 +21,6 @@ export default async function Home() {
    const data = await getData();
   return (
     <div>
-    <h1>Hello world</h1>
     <h2>{data.id}</h2>
     <h3>{data.owner.avatar_url}</h3>
     <Image
@@ -28,12 +28,6 @@ export default async function Home() {
       width={500}
       height={500}
       alt="Picture of the author"/>
-    <ul>
-    <li><Link href="/about">About</Link></li>
-    <li><Link href="/contactus">Contact Us!</Link></li>
-    <li><Link href="/blog/1">Blog 1</Link></li>
-    <li><Link href="/blog/2">Blog2</Link></li>
-    </ul>
     </div>
   )
 }

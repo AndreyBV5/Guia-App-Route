@@ -1,3 +1,4 @@
+import NavBar from './components/navBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -30,7 +31,7 @@ export default async function RootLayout({
   console.log(data)
   return (
     <html lang="en">
-      <body className={inter.className}>  {children} <h3>{data.datetime}</h3></body>
+      <body className={inter.className}> <NavBar/> {children} <h3>{data.datetime}</h3></body>
     </html>
   )
 }

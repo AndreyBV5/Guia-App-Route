@@ -1,8 +1,7 @@
+import NavBar from "../components/navBar";
 
 export default function Page() {
     return (
-     <h1>
-      Hello world about
-      </h1>
+        <h1>Hello world</h1>
     )
   }
