@@ -18,7 +18,14 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const res = await fetch(
-      'http://worldtimeapi.org/api/timezone/America/Costa_Rica');
+    'http://worldtimeapi.org/api/timezone/America/Costa_Rica',
+    {
+      next:{
+        revalidate : 5,
+      }
+    });
+
+
   const data: Time = await res.json();
   console.log(data)
   return (
