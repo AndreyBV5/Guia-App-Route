@@ -12,7 +12,7 @@ type Repository = {
 }
 
 async function getData(){
-  const res = await fetch('https://api.github.com/repos/gamabasis/gif4');
+  const res = await fetch('https://api.github.com/repos/AndreyBV5/Primera_Prueba_Progra_Part2');
   const data: Repository = await res.json();
   return data;
 }
